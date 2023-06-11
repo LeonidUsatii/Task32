@@ -14,14 +14,14 @@ public class Paper {
     }
 
     public void add(Figure figure) {
-        Figure.square += figure.square();
+        Figure.areaOfAddedFigures += figure.square();
 
-        if (Figure.square <= (height * width)) {
+        if (Figure.areaOfAddedFigures <= (height * width)) {
             this.figures[count] = figure;
             count++;
 
             System.out.println("Фигура добавлена, осталось " +
-                    (height * width - Figure.square) + " свободного места");
+                    (height * width - Figure.areaOfAddedFigures) + " свободного места");
         } else {
             System.out.println("Места для добавления фигуры недостаточно.");
         }
