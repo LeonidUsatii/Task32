@@ -18,7 +18,7 @@ public class Figure {
         System.out.println("Фигура(" + x + "," + y + ")");
     }
 
-    public double square() {
+    public double area() {
 
         return 0;
     }

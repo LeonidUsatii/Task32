@@ -17,7 +17,7 @@ public class Cylinder extends Figure{
                 ", радиус - " + radius + ")");
     }
 
-    public double square() {
+    public double area() {
         return Math.PI * radius * radius;
     }
 }

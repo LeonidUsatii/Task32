@@ -13,15 +13,24 @@ public class Paper {
         this.count = 0;
     }
 
-    public void add(Figure figure) {
-        Figure.areaOfAddedFigures += figure.square();
+    public double area() {
+        double result = 0;
+        for (int i = 0; i < count; i++) {
+            result = result + figures[i].area();
+        }
 
-        if (Figure.areaOfAddedFigures <= (height * width)) {
+        return result;
+    }
+
+    public void add(Figure figure) {
+        double areaOfAddedFigures = figure.area() + area();
+
+        if (areaOfAddedFigures <= (height * width)) {
             this.figures[count] = figure;
             count++;
 
             System.out.println("Фигура добавлена, осталось " +
-                    (height * width - Figure.areaOfAddedFigures) + " свободного места");
+                    (height * width - areaOfAddedFigures) + " свободного места");
         } else {
             System.out.println("Места для добавления фигуры недостаточно.");
         }

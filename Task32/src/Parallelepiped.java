@@ -29,7 +29,7 @@ public class Parallelepiped extends Figure {
                 ", сторонаА - " + sideA + ", сторонаВ - " + sideB + ", сторонаС - " + sideC + ")");
     }
 
-    public double square() {
+    public double area() {
         return 2 * (sideA * sideB + sideB * sideC + sideA * sideC);
     }
 }
