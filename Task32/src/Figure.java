@@ -1,7 +1,6 @@
 public class Figure {
     protected int x;
     protected int y;
-    protected static double areaOfAddedFigures;
 
     public Figure(int x, int y) {
         this.x = x;
